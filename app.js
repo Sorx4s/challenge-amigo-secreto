@@ -6,17 +6,20 @@ let amigos = [];
 function limpiarCaja(){
     document.querySelector('#amigo').value = '';
 }
-//Botón para agregar nombres
+//Botón de agregar nombres
 function agregarAmigo() {
     //DOM del botón "añadir" en html
-    let validacion = document.getElementById('amigo').value;
-    // Condicional (si validación no es igual a un campo vacio, agregar amigo, encaso contrario pedir que se agrege un nombre)
-    if (validacion !== "" && isNaN(validacion)) {
+    let nombreAmigo = document.getElementById('amigo').value;
+    // Condicional (si el nombre no es igual a un campo vacio o número entonces se agrega amigo, encaso contrario pedir nombre valido)
+    if (nombreAmigo !== "" && isNaN(nombreAmigo)) {
         //Se agrega un amigo (actualiza el array de amigos)
-        amigos.push(); //PENDIENTE ***_**❓
-        console.log(`Se agrego un nombre`);
+        amigos.push(nombreAmigo); //PENDIENTE ***_**❓ lista,
+        //Muestra en consola que se agrego el nombre del amigo
+        console.log(`Se agrego: ${nombreAmigo}`);
         //Limpia el nombre ingresado en la caja de texto
         limpiarCaja();
+        //Llama a la función para agregar el elemento lista con el nombre introducido
+        actualizarLista();
     //En caso contrario, lanza una alerta que pida un nombre
     } else {
         console.log("");
@@ -25,3 +28,20 @@ function agregarAmigo() {
     }
 }
 
+// Funcion para actualizar la lista de amigos
+function actualizarLista(){
+    //Obtiene el elemento ul donde se mostraran los amigos
+    let lista = document.getElementById('listaAmigos');
+    //Limpia la lista previa
+    lista.innerHTML = "";
+
+    //Bucle que recorre todo el array "amigos"
+    for (let i = 0; i < amigos.length; i++) {
+        //Crea un elemento HTML  <li> en (elementoLista)
+        let elementoLista = document.createElement('li');
+        //Asigna el texto del amigo reciente (amigos[i]) como contenido de  <li>
+        elementoLista.textContent = amigos[i];
+        // Agrega el li creado como hijo del elemento lista
+        lista.appendChild(elementoLista);
+    } 
+}
