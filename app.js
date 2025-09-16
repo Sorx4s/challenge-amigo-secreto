@@ -67,6 +67,7 @@ function sortearAmigo(){
         console.log("Faltan amigos");
         //Muestra un mensaje en pantalla 
         document.getElementById("p-mensaje").innerHTML = "Agrega al menos 2 amigos para realizar el sorteo ";
+        //Marca el mensaje de color rojo
     } else {
         //Selecciona un indice aleatorio
         let sorteoGenerado = Math.floor(Math.random()*amigos.length);
@@ -85,4 +86,21 @@ function sortearAmigo(){
         //let resultado = document.getElementById('resultado');
         return resultado
     }
+}
+
+//Funci+on para volver a jugar de nuevo
+function reiniciarJuego(){
+    //Elimina los elementos del array amigos
+    let elementosRemovidos = amigos.splice(0, amigos.length);
+    console.log(`Lista de amigos removidos: ${elementosRemovidos}`);
+    //Limpia la lista de participantes
+    document.getElementById('listaAmigos').innerHTML="";
+    //Elimina el mensaje de texto en pantalla
+    document.getElementById('p-mensaje').innerHTML="";
+    //Elimina el color del texto
+    document.getElementById('p-mensaje').style.color="";
+    //Elimina el texto en negrita
+    document.getElementById('p-mensaje').style.fontWeight="";
+    limpiarCaja();
+    alert("Juego reiniciado");
 }

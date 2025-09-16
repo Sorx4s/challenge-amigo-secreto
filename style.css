@@ -6,6 +6,9 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+
+    /* Botón restart*/
+    --color-button-restart: #6083e9;
 }
 
 /* Estilos generales */
@@ -90,7 +93,7 @@ body {
 /* Texto de advertencia */
 .p-mensaje{
     font-size: 20px;
-    color: rgb(233, 13, 46);
+    color: #e90d2e;
     justify-content: center;
     padding: 15px;
     margin-top: 10px;
@@ -100,6 +103,8 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 /* Estilos de entrada de texto */
@@ -169,4 +174,23 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+/*Botón restart*/
+.button-restart{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /*Tamaño botón*/
+    padding: 20px 10px;
+    /*Separamos del otro botón*/
+    margin: 20px;
+    color: var(--color-white);
+    background-color: var(--color-button-restart);
+    white-space: nowrap;
+
+}
+
+.button-restart:hover{
+  background-color: var(--color-primary);
 }
