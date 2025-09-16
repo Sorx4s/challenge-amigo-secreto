@@ -10,27 +10,36 @@ function limpiarCaja(){
 //Botón de agregar nombre de amigos
 function agregarAmigo() {
     //DOM del botón "añadir" en html
-    let nombreAmigo = document.getElementById('amigo').value;
+    let nombreAmigo = document.getElementById('amigo').value.trim();
     // Condicional (si el nombre no es igual a un campo vacio o número entonces se agrega amigo, encaso contrario pedir nombre valido)
-    if (nombreAmigo !== "") {
-        // Condicional que comprueba que el nombre no sea número
-        if(isNaN(nombreAmigo)){
-        //Se agrega un amigo (actualiza el array de amigos)
-        amigos.push(nombreAmigo);
-        //Muestra en consola que se agrego el nombre del amigo
-        console.log(`Se agrego: ${nombreAmigo}`);
-        //Limpia el nombre ingresado en la caja de texto
-        limpiarCaja();
-        //Llama a la función para agregar el elemento lista con el nombre introducido
-        actualizarLista();
-        } else{ alert("Por favor, Ingresa un nombre sin números")}
-       
-    //En caso contrario, lanza una alerta que pida un nombre
-    } else {
-        console.log("");
+    if (nombreAmigo === "") {
+        console.log("Se ingreso un campo vacio");
         // Alerta en caso de dejar la caja de texto vacia
         alert("Por favor, ingresa un nombre");
-    }
+        return;
+    } 
+
+    // Condicional que comprueba que el nombre no sea número
+    if(/\d/.test(nombreAmigo)){
+       console.log("Se ingreso un número");
+       alert("Por favor, ingresa un nombre sin números");
+       return; 
+    } 
+    //Condicional que comprueba que el nombre ingresado no este repetido
+    if(amigos.includes(nombreAmigo)){
+       console.log("Se ingreso un número");
+       alert("Por favor, no ingreses un nombre repetido");
+       return; 
+    } 
+
+     //Se agrega un amigo (actualiza el array de amigos)
+    amigos.push(nombreAmigo);
+    //Muestra en consola que se agrego el nombre del amigo
+    console.log(`Se agrego: ${nombreAmigo}`);
+    //Limpia el nombre ingresado en la caja de texto
+    limpiarCaja();
+    //Llama a la función para agregar el elemento lista con el nombre introducido
+    actualizarLista();
 }
 
 // Funcion para actualizar la lista de amigos
@@ -66,13 +75,14 @@ function sortearAmigo(){
         console.log(sorteoGenerado);
         
         //Mostrar el resultado
-        let resultado = document.getElementById('p-mensaje').innerHTML = `Tu amigo secreto es ${amigoSecreto}`;
+        let resultado = document.getElementById('p-mensaje').innerHTML = `🎉 Tu amigo secreto es ${amigoSecreto} 🎉`;
         //Cambia el color del parrafo para dar el resultado
         document.getElementById('p-mensaje').style.color='#09b317ff'
+        //Hace que el texto este en negrita
+        document.getElementById('p-mensaje').style.fontWeight='bold'
         //Elimina la lista de nombres ingresados en pantalla
         document.getElementById('listaAmigos').innerHTML="";
         //let resultado = document.getElementById('resultado');
-        //lista.innerHTML="";
-        return resultado;
+        return resultado
     }
 }
