@@ -32,6 +32,12 @@ function agregarAmigo() {
        return; 
     } 
 
+    //Valia que el nombre del amigo sea mayor a dos caracteres
+    if(nombreAmigo.length < 2){
+        alert('El nombre del amigo debe tener al menos 2 caracteres.');
+        return;
+    }
+
      //Se agrega un amigo (actualiza el array de amigos)
     amigos.push(nombreAmigo);
     //Muestra en consola que se agrego el nombre del amigo
@@ -44,7 +50,7 @@ function agregarAmigo() {
 //Permite que se ingrese el amigo con la tecla enter
   document.getElementById('amigo').addEventListener("keydown", function(event){
         if(event.key === "Enter"){
-            console.log('Presiono la tecla enter')
+            console.log('Presiono la tecla enter');
             agregarAmigo();          
         }
     });
