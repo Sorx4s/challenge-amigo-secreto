@@ -28,7 +28,7 @@ function agregarAmigo() {
     //Condicional que comprueba que el nombre ingresado no este repetido
     if(amigos.includes(nombreAmigo)){
        console.log("Se ingreso un número");
-       alert("Por favor, no ingreses un nombre repetido");
+       alert("Ese nombre ya este en uso. Por favor, ingresa otro");
        return; 
     } 
 
@@ -41,6 +41,13 @@ function agregarAmigo() {
     //Llama a la función para agregar el elemento lista con el nombre introducido
     actualizarLista();
 }
+//Permite que se ingrese el amigo con la tecla enter
+  document.getElementById('amigo').addEventListener("keydown", function(event){
+        if(event.key === "Enter"){
+            console.log('Presiono la tecla enter')
+            agregarAmigo();          
+        }
+    });
 
 // Funcion para actualizar la lista de amigos
 function actualizarLista(){
@@ -88,7 +95,7 @@ function sortearAmigo(){
     }
 }
 
-//Funci+on para volver a jugar de nuevo
+//Función para volver a jugar de nuevo
 function reiniciarJuego(){
     //Elimina los elementos del array amigos
     let elementosRemovidos = amigos.splice(0, amigos.length);
