@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #4b8ced;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
@@ -8,7 +10,7 @@
     --color-white: #FFFFFF;
 
     /* Botón restart*/
-    --color-button-restart: #6083e9;
+    --color-button-background: hsla(0, 0%, 10%, 0.1);
 }
 
 /* Estilos generales */
@@ -46,22 +48,30 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
+    border: 1px transparent;
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
+
+    background-image: linear-gradient(180deg, #b5b5b5cf 30%, transparent 70%);
+    
 }
 
 /* Títulos */
 .main-title {
     font-size: 48px;
-    font-family: "Merriweather", serif;
+    font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
+}
+
+/*Imagen*/
+.image-amigo{
+    width: 200px;
 }
 
 .section-title {
@@ -85,10 +95,31 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid #aaaaaa;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
+
+    
+    /*Degradado*/
+    
+	background-image: linear-gradient(180deg, #a2a2a2 30%, transparent 70%);
+	background-position: center 45%;
+	background-size: 100% 300%;
+    transition: backdrop-filter 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+
 }
+
+.input-name:hover{
+    color: var(--color-text);
+    backdrop-filter: blur(0px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.input-name:focus{
+  /*Elimina linea negra de input*/
+  outline: none;
+}
+
 
 /* Texto de advertencia */
 .p-mensaje{
@@ -123,7 +154,7 @@ body {
 /* Estilos de botón */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
@@ -132,30 +163,34 @@ button {
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-button-background);
     color: var(--color-text);
     border-radius: 0 25px 25px 0;
+
+    /*Transparencia de botón*/
+    border: 2px solid #aaaaaa;
+    backdrop-filter: blur(8px);
+    /*Degradado*/
+	background-image: linear-gradient(180deg, #a2a2a2 30%, transparent 70%);
+	background-position: center 45%;
+	background-size: 100% 200%;
+    /*Transición suave*/
+    transition: backdrop-filter 0.4s ease, background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .button-add:hover {
     background-color: #a1a1a1;
+
+    color: var(--color-white);
+    backdrop-filter: blur(0px);
 }
 
 /* Listas */
-ul {
-    list-style-type: none;
+ol {
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
-    margin: 20px 0;
-}
-
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+    margin: 0px 0px;
 }
 
 /* Botón de sortear título */
@@ -164,9 +199,20 @@ ul {
     align-items: center;
     width: 100%;
     padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
+    color: var(--color-text);
+    background-color: var(--color-button-background);
     font-size: 16px;
+
+    /*Transparencia de botón*/
+    border: 2px solid rgb(243, 183, 99);
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    /*Degradado*/
+	background-image: linear-gradient(180deg, #ff8c44 30%, transparent  70%);
+	background-position: center 45%;
+	background-size: 100% 200%;
+    /*Transición suave*/
+    transition: backdrop-filter 0.4s ease, background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .button-draw img {
@@ -175,6 +221,10 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+
+    backdrop-filter: blur(0px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    color: var(--color-white);
 }
 
 /*Botón restart*/
@@ -183,15 +233,29 @@ ul {
     align-items: center;
     width: 100%;
     /*Tamaño botón*/
-    padding: 20px 10px;
+    padding: 20px 18px;
     /*Separamos del otro botón*/
     margin: 20px;
-    color: var(--color-white);
-    background-color: var(--color-button-restart);
+    color: var(--color-text);
     white-space: nowrap;
+    /*Transparencia de botón*/
+    background-color: var(--color-button-background);
+    border: 2px solid white;
+    margin-inline: 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    /*Degradado*/
+	background-image: linear-gradient(180deg, #80a8ff 30%, transparent 70%);
+	background-position: center 45%;
+	background-size: 100% 200%;
+    /*Transición suave*/
+    transition: backdrop-filter 0.4s ease, background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 
 }
 
 .button-restart:hover{
+  color: var(--color-white);
   background-color: var(--color-primary);
+  backdrop-filter: blur(0px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }

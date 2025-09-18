@@ -91,7 +91,7 @@ function sortearAmigo(){
         //Mostrar el resultado
         let resultado = document.getElementById('p-mensaje').innerHTML = `🎉 Tu amigo secreto es ${amigoSecreto} 🎉`;
         //Cambia el color del parrafo para dar el resultado
-        document.getElementById('p-mensaje').style.color='#09b317ff'
+        document.getElementById('p-mensaje').style.color='#369a00ff'
         //Hace que el texto este en negrita
         document.getElementById('p-mensaje').style.fontWeight='bold'
         //Elimina la lista de nombres ingresados en pantalla
