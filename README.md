@@ -11,9 +11,7 @@
 
 
 [![Alura](https://custom-icon-badges.demolab.com/badge/Alura_LATAM-001332?logo=alura-white&logoColor=fff)](https://www.aluracursos.com/)
-[![Oracle Next Education](https://custom-icon-badges.demolab.com/badge/Oracle_Next_Education-red?-white&logoColor=fff)](https://www.oracle.com/mx/education/oracle-next-education/) ![Release date](https://img.shields.io/badge/Lanzamiento-Septiembre-F7DF1E) ![Status](https://img.shields.io/badge/STATUS-Finalizado-green) 
-
-[![ReadMe](https://img.shields.io/badge/ReadMe-018EF5?logo=readme&logoColor=fff)](#)
+[![Oracle Next Education](https://custom-icon-badges.demolab.com/badge/Oracle_Next_Education-red?-white&logoColor=fff)](https://www.oracle.com/mx/education/oracle-next-education/) ![Release date](https://img.shields.io/badge/Lanzamiento-Septiembre-F7DF1E) ![Status](https://img.shields.io/badge/STATUS-Finalizado-green) [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github&logoColor=white)](https://sorx4s.github.io/challenge-amigo-secreto/)
 
 
 
@@ -24,7 +22,7 @@ Este proyecto consiste en un juego web interactivo en el que se ingresan los nom
 
 - ☑️ La aplicación valida los datos ingresados para asegurar un funcionamiento correcto y justo del sorteo . 
 
-- 🎨 La interfaz del proyecto está inspirada en el estilo visual estética **Frutiger Aero**🍃🫧, lo que le da un toque moderno, colorido y dinámico.
+- 🎨 La interfaz del proyecto está inspirada en el estilo visual **Frutiger Aero**🍃🫧, lo que le da un toque moderno, colorido y dinámico.
 
 > Este proyecto fue desarrollado como parte del programa **ONE (Oracle Next Education)** en colaboración con **Alura LATAM**. Su objetivo es poner en práctica los conocimientos adquiridos en programación, tales como arrays, variables, funciones y estructuras condicionales como if y else. 
 
@@ -58,6 +56,7 @@ Este proyecto consiste en un juego web interactivo en el que se ingresan los nom
 2. (Opcional) Instala la extensión **[Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)** en Visual Studio Code.
 
 3. Abre el archivo `index.html` con la extensión o en cualquier navegador (preferentemente uno basado en Chromium).
+4. También puedes probar el proyecto a traves de [GitHub Pages](https://sorx4s.github.io/challenge-amigo-secreto/).
 <br></br>
 
 # 🔨 Tecnologías utilizadas
