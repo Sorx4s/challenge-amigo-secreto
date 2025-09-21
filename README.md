@@ -13,10 +13,6 @@
 [![Alura](https://custom-icon-badges.demolab.com/badge/Alura_LATAM-001332?logo=alura-white&logoColor=fff)](https://www.aluracursos.com/)
 [![Oracle Next Education](https://custom-icon-badges.demolab.com/badge/Oracle_Next_Education-red?-white&logoColor=fff)](https://www.oracle.com/mx/education/oracle-next-education/) ![Release date](https://img.shields.io/badge/Lanzamiento-Septiembre-F7DF1E) ![Status](https://img.shields.io/badge/STATUS-Finalizado-green) 
 
-[![ReadMe](https://img.shields.io/badge/ReadMe-018EF5?logo=readme&logoColor=fff)](#)
-
-
-
 
 # 📋 Descripción del proyecto
 
@@ -41,10 +37,6 @@ Este proyecto consiste en un juego web interactivo en el que se ingresan los nom
 
 
 
-
-
-
-
 ## 🚫 Restricciones en el funcionamiento
 > [!CAUTION]
 > - No se puede ingresar un campo vacío.
@@ -53,8 +45,6 @@ Este proyecto consiste en un juego web interactivo en el que se ingresan los nom
 > - No se permiten nombres con menos de 2 caracteres.
 > - Es necesario ingresar al menos 2 nombres para poder realizar el sorteo.
 
-
-<br></br>
 
 # 📦 Acceso al proyecto
 1. Clona el repositorio o [Descargalo aquí](https://github.com/Sorx4s/challenge-amigo-secreto/archive/refs/heads/main.zip):
