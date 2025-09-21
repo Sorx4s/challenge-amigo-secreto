@@ -41,10 +41,6 @@ Este proyecto consiste en un juego web interactivo en el que se ingresan los nom
 
 
 
-
-
-
-
 ## 🚫 Restricciones en el funcionamiento
 > [!CAUTION]
 > - No se puede ingresar un campo vacío.
@@ -53,8 +49,6 @@ Este proyecto consiste en un juego web interactivo en el que se ingresan los nom
 > - No se permiten nombres con menos de 2 caracteres.
 > - Es necesario ingresar al menos 2 nombres para poder realizar el sorteo.
 
-
-<br></br>
 
 # 📦 Acceso al proyecto
 1. Clona el repositorio o [Descargalo aquí](https://github.com/Sorx4s/challenge-amigo-secreto/archive/refs/heads/main.zip):
